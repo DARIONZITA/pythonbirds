@@ -6,6 +6,13 @@ class Pessoa:
         
     def cumprimentar(self):
         return 'ola'
+    @staticmethod
+    def estatico():
+        return 42
+    @classmethod
+    def  nome_atributos_de_classes(cls):
+        return cls.estatico()
+
 if __name__ == '__main__':
     darion= Pessoa('dario')
     paulo=Pessoa('paulo', 13, darion)
@@ -19,4 +26,5 @@ if __name__ == '__main__':
     paulo.sobrenome='garcia'
     del darion.filhos
     print(paulo.sobrenome)
+    print(darion.nome_atributos_de_classes())
     
