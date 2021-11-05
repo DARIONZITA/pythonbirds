@@ -12,10 +12,11 @@ class Pessoa:
     @classmethod
     def  nome_atributos_de_classes(cls):
         return cls.estatico()
-
+class Homen(Pessoa):
+    pass
 if __name__ == '__main__':
-    darion= Pessoa('dario')
-    paulo=Pessoa('paulo', 13, darion)
+    darion=Homen('dario')
+    paulo=Homen('paulo', 13, darion)
     print(darion.nome)
     darion.nome= 'dario nzita'
     print(darion.nome)
@@ -27,4 +28,3 @@ if __name__ == '__main__':
     del darion.filhos
     print(paulo.sobrenome)
     print(darion.nome_atributos_de_classes())
-    
